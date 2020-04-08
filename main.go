@@ -18,4 +18,16 @@ func main() {
 	// Logic
 	defer databaseConnection.Close()
 	fmt.Println(databaseConnection)
+
+	pachonsitos := [...]string{
+		"Lirlis", "bb",
+	}
+	fmt.Printf("%T\n", pachonsitos)
+	printString(pachonsitos[:]...)
+}
+
+func printString(x ...string) {
+	for _, v := range x {
+		fmt.Println(v)
+	}
 }
